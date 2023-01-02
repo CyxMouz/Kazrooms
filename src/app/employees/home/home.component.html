@@ -1,0 +1,96 @@
+<div class="container mt-2">
+  <button type="button" class="btn btn-primary position-relative">
+    Current employee
+    <span
+      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+    >
+      {{ getCount$ | async }}
+    </span>
+  </button>
+  <div class="row">
+    <div class="col col-md4 offset-md-4">
+      <a
+        [routerLink]="['/employees/add']"
+        routerLinkActive="router-link-active"
+        class="btn btn-dark"
+        >Add A new Employee</a
+      >
+    </div>
+    <div class="col col-md4 offset-md-4"></div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let employee of employees$ | async">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="" srcset="" />
+        <div class="card-body">
+          <h5 class="card-title">Employee ID</h5>
+          <ul class="list-group">
+            <label for="">Full Name</label>
+            <li class="list-group-item">
+              {{ employee.first_name }} {{ employee.last_name }}
+            </li>
+            <label for="">Birth Date</label>
+            <li class="list-group-item">
+              {{ employee.birth_date }}
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <a
+            class="btn btn-dark"
+            [routerLink]="['/employees/edit', employee.id]"
+            >Edit</a
+          >
+          <button
+            type="button"
+            (click)="openDeleteModal(employee.id)"
+            class="btn btn-danger"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--form modal-->
+<div
+  class="modal fade"
+  id="myModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Delete confirmation ?
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h3>Are you sure to delete this employee ?</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          data-bs-dismiss="modal"
+          (click)="confirmDelete()"
+        >
+          delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

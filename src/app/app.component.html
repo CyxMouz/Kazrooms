@@ -1,0 +1,107 @@
+<!-- <nav
+  class="navbar navbar-dark navbar-text-dark"
+  style="background-color: rgb(0, 61, 84)"
+>
+  <div class="container">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasDarkNavbar"
+      aria-controls="offcanvasDarkNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Kazrom</a>
+
+    <button style="color: aliceblue" mat-button [matMenuTriggerFor]="aboveMenu">
+      Home
+    </button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <button style="color: aliceblue" mat-button [matMenuTriggerFor]="belowMenu">
+      Courses
+    </button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <button
+      style="color: aliceblue"
+      mat-button
+      [matMenuTriggerFor]="beforeMenu"
+    >
+      Fields
+    </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <button style="color: aliceblue" mat-button [matMenuTriggerFor]="afterMenu">
+      About Us
+    </button>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    <button style="color: aliceblue" mat-button [matMenuTriggerFor]="afterMenu">
+      Contact Us
+    </button>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasDarkNavbar"
+      aria-labelledby="offcanvasDarkNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-blue"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body" style="background-color: black">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              [routerLink]="['/books']"
+              routerLinkActive="router-link-active"
+              >Book</a
+            >
+            <a
+              class="nav-link active"
+              aria-current="page"
+              [routerLink]="['/employees']"
+              routerLinkActive="router-link-"
+              >Employees</a
+            >
+            <a
+              class="nav-link active"
+              aria-current="page"
+              [routerLink]="['/games']"
+              routerLinkActive="router-link-"
+              >Games</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav> -->
+<div class="mat-typography">
+  <router-outlet></router-outlet>
+</div>

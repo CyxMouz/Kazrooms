@@ -1,0 +1,58 @@
+{
+  "books": [],
+  "employees": [
+    {
+      "id": 1,
+      "first_name": "Cyx",
+      "last_name": "Mohamed Amine",
+      "birth_date": "1994-12-11",
+      "id_employee": "0000"
+    },
+    {
+      "id": 2,
+      "first_name": "ProcyX",
+      "last_name": "Mohamed ",
+      "birth_date": "",
+      "id_employee": "0002",
+      "games": []
+    },
+    {
+      "id": 3,
+      "first_name": "Minato",
+      "last_name": "",
+      "birth_date": "2022-12-11",
+      "id_employee": "0003",
+      "games": []
+    },
+    {
+      "id": 4,
+      "first_name": "Cyx07",
+      "last_name": "",
+      "birth_date": "2022-12-11",
+      "id_employee": "0004",
+      "games": []
+    }
+  ],
+  "games": [
+    {
+      "id": "1",
+      "name": "Valorant",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Valorant_logo_-_pink_color_version.svg/1200px-Valorant_logo_-_pink_color_version.svg.png"
+    },
+    {
+      "id": "2",
+      "name": "league of legends",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/League_of_Legends_2019_vector.svg/1200px-League_of_Legends_2019_vector.svg.png"
+    },
+    {
+      "id": "3",
+      "name": "Cs GO",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Counter-Strike_Global_Offensive.svg"
+    },
+    {
+      "id": "4",
+      "name": "Dota 2",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Antu_dota.svg/512px-Antu_dota.svg.png"
+    }
+  ]
+}

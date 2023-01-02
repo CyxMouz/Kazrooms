@@ -1,0 +1,28 @@
+<div class="container">
+  <legend>Add a New Game</legend>
+  <div class="form-control">
+    <div class="mb-3">
+      <label for="gameId" class="form-label">Game id</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="gameForm.id"
+        id="gameId"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="gameName" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="gameForm.name"
+        id="gameName"
+      />
+    </div>
+    <div class="mb-3">
+      <button type="button" class="btn btn-dark" (click)="update()">
+        Update
+      </button>
+    </div>
+  </div>
+</div>

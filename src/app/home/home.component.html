@@ -1,0 +1,290 @@
+<div class="body-background" id="home">
+  <nav>
+    <div class="logo">Kazrom</div>
+    <span class="menubtn" (click)="openNav()">&#9776;</span>
+    <div class="navLinks">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#course">Course</a></li>
+        <li><a href="http://">About Us</a></li>
+        <li><a href="http://">Contact Us</a></li>
+        <button type="button">Login</button>
+        <button class="btn btn-info">SignUp</button>
+      </ul>
+    </div>
+  </nav>
+  <!-- side navbar  -->
+  <div class="sideNav" id="sidenav" #sidenav>
+    <a href="javascript:void(0)" class="closeBtn" (click)="closeNav()"
+      >&#10006;</a
+    >
+    <a href="#card">Home</a>
+    <a href="#">Course</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+    <a href="#"><button type="button">Login</button></a>
+    <a href="#"><button type="button">SignUp</button></a>
+  </div>
+
+  <!-- Header content with banner image -->
+  <div class="container-banner">
+    <div class="row">
+      <div class="col">
+        <div class="column1">
+          <h1>E-Learning Platform</h1>
+          <p>
+            Kazrom is an Easy-to-learn platform, for students and teachers.
+            Start now from your room in your bed in one click
+          </p>
+          <button>Get Started</button>
+          <div class="container-search">
+            <form class="searchForm">
+              <label for="">Search</label>
+              <input
+                id="search-input"
+                type="search"
+                laceholder="Search..."
+                [(ngModel)]="searchTerm"
+                (keyup)="search()"
+                [ngModelOptions]="{ standalone: true }"
+              />
+
+              <ul>
+                <li *ngFor="let result of searchResults$ | async">
+                  {{ result }}
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="column2">
+          <img
+            src="https://www.hmablogs.com/wp-content/uploads/2022/06/banner-img.png"
+            alt="banner"
+            width="450px"
+          />
+        </div>
+      </div>
+      <div class="b-example-divider">
+        <h2 style="justify-content: center; text-align: center; margin: 8px">
+          {{ slogan }}
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  -->
+
+<div class="b-example-divider"></div>
+<div class="container-course">
+  <div class="container-title"><h1>Courses</h1></div>
+  <div class="button-group">
+    <button>Categories</button>
+  </div>
+  <!-- cards  -->
+  <div class="container-card" id="course">
+    <div class="card">
+      <div class="card-header">
+        <img
+          src="https://c4.wallpaperflare.com/wallpaper/39/346/426/digital-art-men-city-futuristic-night-hd-wallpaper-preview.jpg"
+          alt="rover"
+        />
+      </div>
+      <div class="card-body">
+        <span class="tag tag-green">Physics</span>
+        <h4>Why is the Tesla Cybertruck designed the way it is?</h4>
+        <p>An exploration into the truck's polarising design</p>
+        <div class="span-container"></div>
+        <!-- <div class="user">
+        <img
+          src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo"
+          alt="user"
+        />
+        <div class="user-info">
+          <h5>July Dec</h5>
+          <small>2h ago</small>
+        </div>
+      </div> -->
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <img
+          src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg"
+          alt="rover"
+        />
+      </div>
+      <div class="card-body">
+        <span class="tag tag-teal">Math</span>
+        <h4>Why is the mathematic so hard?</h4>
+        <p>An exploration into the truck's polarising design</p>
+        <div class="span-container"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <img
+          src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg"
+          alt="ballons"
+        />
+      </div>
+      <div class="card-body">
+        <span class="tag tag-purple">Computer Science</span>
+        <h4>How to Keep Going When You Don’t Know What’s Next</h4>
+        <p>
+          The future can be scary, but there are ways to deal with that fear.
+        </p>
+        <div class="span-container"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <img
+          src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg"
+          alt="city"
+        />
+      </div>
+      <div class="card-body">
+        <span class="tag tag-pink">Design</span>
+        <h4>10 Rules of Dashboard Design</h4>
+        <p>Dashboard Design Guidelines</p>
+        <div class="span-container"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="b-example-divider"></div>
+
+<!-- <div class="container-aboutus">
+  <div class="container-title" id="aboutus">
+    <h1>About Us</h1>
+  </div>
+  <div class="row">
+    <div class="column1">
+      <h1>Kazrom</h1>
+      <p>
+        We have here to connect student teachers and anyone who want to learn
+      </p>
+    </div>
+    <div class="column2"></div>
+  </div>
+</div> -->
+<section id="about">
+  <div class="about">
+    <div class="container-aboutus">
+      <h2>About Us</h2>
+      <div class="about-card">
+        <h2>Presentation</h2>
+        <p>
+          Our online learning platform is designed to help users learn new
+          things in an interactive and engaging way. Our platform features a
+          variety of courses and learning materials in a variety of subjects,
+          including business, technology, and personal development. With our
+          platform, users can access lessons and course materials at their own
+          pace and track their progress as they go.
+        </p>
+
+        <h2>History</h2>
+        <p>
+          Our company was founded with the goal of making high-quality education
+          accessible to everyone. We believe that everyone should have the
+          opportunity to learn and grow, no matter their background or
+          circumstances. That's why we created our online learning platform - to
+          provide a convenient and affordable way for people to learn and
+          achieve their goals.
+        </p>
+
+        <h2>Values</h2>
+        <p>
+          At our company, we value innovation, collaboration, and inclusivity.
+          These values guide everything we do, from the development of new
+          courses and learning materials to the way we interact with our users
+          and partners.
+        </p>
+
+        <h2>Member</h2>
+        <p>
+          Our team is made up of experienced educators, technology experts, and
+          business professionals who are passionate about helping others learn
+          and grow. We are committed to providing the best possible experience
+          for our users and strive to make our platform a valuable resource for
+          anyone looking to learn something new. We are proud of the results we
+          have achieved so far and the positive impact our platform has had on
+          our users.
+        </p>
+
+        <h2>Results</h2>
+        <p>
+          We are proud of the results we have achieved so far and the positive
+          impact our platform has had on our users. Many of our users have told
+          us that our courses and learning materials have helped them achieve
+          their goals and advance in their careers. We are constantly working to
+          improve and expand our platform, and we are excited to continue
+          helping our users learn and grow in the future.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="b-example-divider"></div>
+<section id="about">
+  <div class="teamabout">
+    <div class="container-teamabout">
+      <h2>Notre équipe</h2>
+      <div class="team">
+        <div class="team-member">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjZXxlbnwwfHwwfHw%3D&w=1000&q=80"
+            alt="Photo de membre d'équipe 1"
+          />
+          <h4>Sur Keshwahed</h4>
+          <p>Kesh haja manger</p>
+          <div class="tag tag-teal text-center">yban hendi</div>
+        </div>
+        <div class="team-member">
+          <img
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            alt="Photo de membre d'équipe 1"
+          />
+          <h4>Sur keshwahda</h4>
+          <p>manger ta3 kwada</p>
+          <div class="tag tag-pink text-center">tban mliha</div>
+        </div>
+        <!-- Ajoutez autant de membres d'équipe que nécessaire -->
+      </div>
+    </div>
+  </div>
+</section>
+<div class="b-example-divider"></div>
+<section class="contact-us">
+  <h2>Contact Us</h2>
+  <p>
+    Got a question or feedback for us? We'd love to hear from you. Please fill
+    out the form below and we'll get back to you as soon as possible.
+  </p>
+  <form action="#">
+    <input type="text" class="form-control" placeholder="Name" required />
+    <input type="email" class="form-control" placeholder="Email" required />
+    <textarea class="form-control" placeholder="Message" required></textarea>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</section>
+<div class="b-example-divider"></div>
+
+<footer>
+  <div class="container-footer">
+    <div class="left">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="right">
+      <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+    </div>
+    <div class="copyright">Copyright &copy; 2022 Kazrom</div>
+  </div>
+</footer>

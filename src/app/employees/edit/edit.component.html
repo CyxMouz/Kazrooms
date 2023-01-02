@@ -1,0 +1,44 @@
+<div class="container">
+  <legend>Update Employee</legend>
+  <div class="form-control">
+    <div class="mb-3">
+      <label for="employeeId" class="form-label">Employee id</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="employeeForm.id_employee"
+        id="employeeId"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="employeeFirstName" class="form-label">First name</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="employeeForm.first_name"
+        id="employeeFirstName"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="employeeLastName" class="form-label">Last name</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="employeeForm.last_name"
+        id="employeeLastName"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="employeeDateBirth" class="form-label">Birth Date</label>
+      <input
+        type="date"
+        class="form-control"
+        [(ngModel)]="employeeForm.birth_date"
+        id="employeeDateBirth"
+      />
+    </div>
+    <button type="button" class="btn btn-dark" (click)="update()">
+      Update
+    </button>
+  </div>
+</div>
